@@ -1,0 +1,54 @@
+{
+    "name": "ricorocks-digital-agency/giveaninch",
+    "description": "A package that simplifies calculations around distance and metrics.",
+    "keywords": [
+        "ricorocks-digital-agency",
+        "giveaninch"
+    ],
+    "homepage": "https://github.com/ricorocks-digital-agency/giveaninch",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Luke Downing",
+            "email": "lukeraymonddowning@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "RicorocksDigitalAgency\\Giveaninch\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "RicorocksDigitalAgency\\Giveaninch\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "RicorocksDigitalAgency\\Giveaninch\\GiveaninchServiceProvider"
+            ],
+            "aliases": {
+                "Giveaninch": "RicorocksDigitalAgency\\Giveaninch\\GiveaninchFacade"
+            }
+        }
+    }
+}
