@@ -17,7 +17,7 @@
     ],
     "require": {
         "php": "^7.1",
-        "illuminate/support": "^6.0"
+        "illuminate/support": "^6.0|^7.0|^8.0"
     },
     "require-dev": {
         "orchestra/testbench": "^4.0",
@@ -30,7 +30,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "RicorocksDigitalAgency\\Giveaninch\\Tests\\": "tests"
+            "RicorocksDigitalAgency\\Giveaninch\\\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -44,10 +44,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "RicorocksDigitalAgency\\Giveaninch\\GiveaninchServiceProvider"
+                "GiveAnInchServiceProvider"
             ],
             "aliases": {
-                "Giveaninch": "RicorocksDigitalAgency\\Giveaninch\\GiveaninchFacade"
+                "Giveaninch": "GiveAnInch"
             }
         }
     }
