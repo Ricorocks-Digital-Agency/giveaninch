@@ -1,11 +1,6 @@
-# Very short description of the package
+# GiveAnInch
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/ricorocks-digital-agency/giveaninch.svg?style=flat-square)](https://packagist.org/packages/ricorocks-digital-agency/giveaninch)
-[![Build Status](https://img.shields.io/travis/ricorocks-digital-agency/giveaninch/master.svg?style=flat-square)](https://travis-ci.org/ricorocks-digital-agency/giveaninch)
-[![Quality Score](https://img.shields.io/scrutinizer/g/ricorocks-digital-agency/giveaninch.svg?style=flat-square)](https://scrutinizer-ci.com/g/ricorocks-digital-agency/giveaninch)
-[![Total Downloads](https://img.shields.io/packagist/dt/ricorocks-digital-agency/giveaninch.svg?style=flat-square)](https://packagist.org/packages/ricorocks-digital-agency/giveaninch)
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what PSRs you support to avoid any confusion with users and contributors.
+A Laravel package that provides geographic distance calculations between points.
 
 ## Installation
 
@@ -17,9 +12,17 @@ composer require ricorocks-digital-agency/giveaninch
 
 ## Usage
 
-``` php
-// Usage description here
+Using the package is simple via the `GiveAnInch` facade.
+
+### Get the distance in KM between two points
+```php
+GiveAnInch::from(0, 0)->to(0, 0)->getDistance();
 ```
+
+### Check if two coordinates are within a given radius of each other
+```php
+GiveAnInch::from(0, 0)->to(0, 0)->isWithin(10);
+````
 
 ### Testing
 
